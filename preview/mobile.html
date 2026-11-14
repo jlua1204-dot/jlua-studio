@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>미리보기 · 모바일 390px</title>
+<style>
+  html, body { margin: 0; background: #e9e4da; }
+  #frame { display: block; width: 390px; height: 900px; border: 0; margin: 0; }
+</style>
+</head>
+<body>
+<iframe id="frame" src="../index.html?capture" title="모바일 미리보기"></iframe>
+<script>
+  var frame = document.getElementById('frame');
+  frame.addEventListener('load', function () {
+    try {
+      var doc = frame.contentDocument;
+      var h = Math.max(doc.documentElement.scrollHeight, doc.body.scrollHeight);
+      frame.style.height = h + 'px';
+      document.title = '미리보기 높이 ' + h;
+    } catch (e) {
+      document.title = '높이 측정 실패';
+    }
+  });
+</script>
+</body>
+</html>
