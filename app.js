@@ -3,6 +3,10 @@
   'use strict';
 
   document.documentElement.classList.add('js');
+  // ?capture — 스크린샷 도구가 페이지를 통째로 담을 때 등장 애니메이션을 끕니다
+  if (/[?&]capture\b/.test(window.location.search)) {
+    document.documentElement.classList.remove('js');
+  }
 
   /* ---------- header state ---------- */
   var header = document.getElementById('header');
