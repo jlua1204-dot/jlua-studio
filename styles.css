@@ -1201,6 +1201,7 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
   .compare { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work--wide { grid-column: span 2; }
+  .work--banner { grid-column: span 2; }
   .phone { width: 150px; }
 }
 
@@ -1228,7 +1229,7 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
     grid-template-columns: repeat(6, minmax(0, 1fr));
     align-items: stretch;
   }
-  .work { grid-column: span 2; }
+  .work { grid-column: span 3; }
   .work--wide { grid-column: span 6; }
   .work--wide .work__media { aspect-ratio: 16 / 8; }
   .work--wide .work__body { padding: 28px 30px 32px; gap: 14px; }
